@@ -14,14 +14,16 @@
     <h1>Clone Post Wordpress</h1>
 
     <?php
+        query_posts(  'posts_per_page=10' );
+        
+        while ( have_posts() ) : the_post();
+            echo '<li>';
+            the_title();
+            echo '</li>';
+        endwhile;
 
-        $post = get_post(14075);
-        $output =  apply_filters( 'the_content', $post->post_content );
+        wp_reset_query();
 
-        print_r($output);
-
-        // wp_reset_query();
-    
     ?>
 
 
