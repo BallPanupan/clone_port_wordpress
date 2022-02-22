@@ -17,28 +17,12 @@
     <h1>Clone Post Wordpress</h1>
 
     <?php
-        // $result[1] = [
-        //     "id" => 14000,
-        //     "title"=>35,
-        //     "content"=>'hello content'
-        // ];
-
-        // $result[2] = [
-        //     "id" => 14000,
-        //     "title"=>35,
-        //     "content"=>'hello content'
-        // ];
-
         $count_all_post = wp_count_posts()->publish;
 
-        // get_all_post($count_all_post);
+        // create folder for post by post
 
 
 
-        
-        echo "<pre>";
-        print_r(get_all_post($count_all_post));
-        echo "</pre>";
     ?>
 
 
