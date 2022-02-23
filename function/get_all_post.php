@@ -1,4 +1,13 @@
 <?php
+    function create_folder($id){
+        $file_location =  "all_post/".$id;
+
+        if(!is_dir($file_location)) {
+            mkdir($file_location);
+            mkdir($file_location."/img");
+        }
+    }
+
     function get_all_post($count) {
         $publish_post = 'posts_per_page='. $count;
 
@@ -16,6 +25,8 @@
                 "id" => get_the_ID(),
                 "title" => get_the_title()
             ];
+
+            // create_folder(get_the_ID());
             $i++;
 
         endwhile;
